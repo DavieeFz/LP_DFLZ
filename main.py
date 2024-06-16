@@ -1,5 +1,5 @@
-import random
-import string
+import random  # Libreria para utilizar numeros aleatorios
+import string  # Libreria para coleccion de cadenas de texto
 
 def generar_contraseña(longitud):
     # Definimos los caracteres que queremos incluir en la contraseña
@@ -10,9 +10,15 @@ def generar_contraseña(longitud):
     
     return contraseña
 
-# Solicitamos al usuario la longitud deseada para la contraseña
-longitud = int(input("Introduce la longitud de la contraseña: "))
-
-# Generamos y mostramos la contraseña
-contraseña_generada = generar_contraseña(longitud)
-print("Tu nueva contraseña es:", contraseña_generada)
+while True:
+    # Solicitamos al usuario la longitud deseada para la contraseña
+    longitud = int(input("Introduce la longitud de la contraseña: "))
+    
+    # Generamos y mostramos la contraseña
+    contraseña = generar_contraseña(longitud)
+    print(f"Tu contraseña generada es: {contraseña}")
+    
+    # Preguntamos al usuario si desea generar otra contraseña
+    otra = input("¿Deseas generar otra contraseña? (s/n): ").strip().lower()
+    if otra != 's':
+        break
