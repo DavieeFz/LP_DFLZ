@@ -1,3 +1,5 @@
+#GENERADOR DE CONTRASELAS
+#David LIgña
 import random  # Libreria para utilizar numeros aleatorios
 import string  # Libreria para coleccion de cadenas de texto
 
